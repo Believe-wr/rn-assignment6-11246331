@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import logo from '../assets/Logo.png';
-import addCircleIcon from '../assets/add_circle.png'; // Import the add-circle icon
-import filterIcon from '../assets/Filter.png'; // Import the Filter icon
-import listViewIcon from '../assets/Listview.png'; // Import the Listview icon
+import addCircleIcon from '../assets/add_circle.png'; 
+import filterIcon from '../assets/Filter.png'; 
+import listViewIcon from '../assets/Listview.png';
 
 const products = [
   { id: '1', name: 'Office Wear', description: 'reversible angora cardigan', price: 120, image: require('../assets/dress1.png') },
@@ -60,7 +60,7 @@ const HomeScreen = ({ navigation }) => {
           <TouchableOpacity style={styles.icon}>
             <Image source={require('../assets/Search.png')} style={styles.iconImage} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.icon} onPress={() => navigation.navigate('Cart', { cart, updateCart: setCart })}>
+          <TouchableOpacity style={styles.icon} onPress={() => navigation.navigate('Cart')}>
             <Image source={require('../assets/shoppingBag.png')} style={styles.iconImage} />
           </TouchableOpacity>
         </View>
@@ -93,7 +93,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         )}
       />
-      <TouchableOpacity onPress={() => navigation.navigate('Cart', { cart, updateCart: setCart })} style={styles.cartButton}>
+      <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={styles.cartButton}>
         <Text style={styles.cartButtonText}>Go to Cart ({cart.length})</Text>
       </TouchableOpacity>
     </View>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginHorizontal: 5,
-    },
+  },
   iconImage: {
     width: 24,
     height: 24,

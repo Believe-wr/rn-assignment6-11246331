@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import searchIcon from '../assets/remove.png';
+import removeIcon from '../assets/remove.png';
 import cartIcon from '../assets/shoppingBag.png'; 
 import checkoutImage from '../assets/checkout.png'; 
 import logoImage from '../assets/Logo.png';
@@ -42,8 +42,8 @@ const CartScreen = ({ navigation }) => {
         <Text style={styles.productDescription}>{item.description}</Text>
         <Text style={styles.price}>${item.price}</Text>
       </View>
-      <TouchableOpacity onPress={() => removeFromCart(item.id)} style={styles.searchButton}>
-        <Image source={searchIcon} style={styles.searchIcon} />
+      <TouchableOpacity onPress={() => removeFromCart(item.id)} style={styles.removeButton}>
+        <Image source={removeIcon} style={styles.removeIcon} />
       </TouchableOpacity>
     </View>
   );
@@ -137,9 +137,12 @@ const styles = StyleSheet.create({
     color: '#ff4500',
     marginTop: 5,
   },
-  searchButton: {
+  removeButton: {
     padding: 10,
-    borderRadius: 50,
+  },
+  removeIcon: {
+    width: 24,
+    height: 24,
   },
   totalContainer: {
     flexDirection: 'row',
