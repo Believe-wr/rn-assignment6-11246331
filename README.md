@@ -22,4 +22,7 @@ CartScreen: Displays the items in the cart and the total cost, allowing users to
 
 # Screenshots
 Home Screen: 
+![HomeScreen](https://github.com/Believe-wr/rn-assignment6-11246331/assets/151064445/06750b43-b45b-42b4-aa0f-4ae8c8873597)
+
 Cart Screen: 
+![CartScreen](https://github.com/Believe-wr/rn-assignment6-11246331/assets/151064445/8d8852a1-01f9-4135-a044-a435643d06f8)
